@@ -5,7 +5,7 @@
 .container {
   @include column-center;
   background: linear-gradient(#FFFFFF, #B7DBF3);
-  padding: 20px;
+  padding: 20px 0;
 
   h1 {
     margin-top: 0;
