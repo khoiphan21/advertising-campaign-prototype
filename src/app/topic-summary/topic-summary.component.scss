@@ -1,0 +1,96 @@
+$purple: #B585DB;
+$yellow: #F4C70A;
+$blue: #3999E3;
+
+$yellow-bg: linear-gradient(to right, white, $yellow,$yellow, $yellow);
+
+.container {
+  position: relative;
+  width: 45vw;
+  margin-right: 20px;
+
+  p {
+    position: absolute;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    line-height:  125%;
+  }
+
+  .depression {
+    left: 0;
+    top: 0;
+    width: 190px;
+    height: 190px;
+    color: white;
+    background: $blue;
+  }
+
+  .anxiety {
+    left: 43%;
+    top: 0;
+    width: 250px;
+    height: 250px;
+    color: rgb(40, 40, 40);
+    background: $yellow-bg;
+    font-size: 50px;
+  }
+
+  .anger {
+    left: 30%;
+    top: 10vh;
+    $size: 100px;
+    width: $size;
+    height: $size;
+    font-size: $size / 7;
+    color: white;
+    background: $purple;
+  }
+
+  .verbal-abuse {
+    left: 70%;
+    top: 15vh;
+    $size: 190px;
+    width: $size;
+    height: $size;
+    font-size: $size / 7;
+    color: white;
+    background: $blue;
+  }
+
+  .stress {
+    left: 10%;
+    top: 25vh;
+    width: 200px;
+    height: 200px;
+    color: white;
+    background: turquoise;
+    font-size: 40px;
+  }
+
+  .cyber-bullying {
+    left: 40%;
+    top: 30vh;
+    $size: 180px;
+    width: $size;
+    height: $size;
+    font-size: $size / 7;
+    color: black;
+    background: $yellow-bg;
+  }
+
+  .isolation {
+    $size: 180px;
+    top: 50vh;
+    left: 17%;
+    width: $size;
+    height: $size;
+    font-size: $size / 7;
+    color: white;
+    background: $purple;
+  }
+}

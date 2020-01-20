@@ -1,0 +1,26 @@
+
+$blue: #4787D3;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#FFFFFF, #B7DBF3);
+  padding: 40px;
+
+  span.highlight {
+    color:$blue;
+    text-decoration: underline;
+  }
+
+  .hashtag {
+    color: $blue;
+    letter-spacing: 1.5px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+}
