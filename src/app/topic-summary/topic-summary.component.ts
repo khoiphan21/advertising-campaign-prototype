@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-
+import { Component, OnInit, ChangeDetectorRef } from "@angular/core";
+import { ChatDataService } from "../services";
 
 @Component({
   selector: "app-topic-summary",
@@ -7,8 +7,16 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./topic-summary.component.scss"]
 })
 export class TopicSummaryComponent implements OnInit {
-  constructor() {}
+  readonly service = ChatDataService.instance;
+
+  voicesCount = 245657;
+
+  constructor(private changeDetector: ChangeDetectorRef) {}
 
   ngOnInit() {
+    this.service.message$.subscribe(() => {
+      this.voicesCount++;
+      this.changeDetector.detectChanges();
+    });
   }
 }

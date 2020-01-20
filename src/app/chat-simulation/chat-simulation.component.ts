@@ -60,14 +60,13 @@ export class ChatSimulationComponent implements OnInit {
     }
   ];
 
-  offset = 0;
-
   constructor(private changeDetector: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.service.message$.subscribe(message => {
       this.data.push(message);
       this.changeDetector.detectChanges();
+      
       setTimeout(() => {
         const objDiv = document.getElementById(
           "chat-content"
