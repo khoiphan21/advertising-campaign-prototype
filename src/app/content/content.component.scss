@@ -3,8 +3,9 @@
 @import '../sass/mixins.scss';
 
 .container {
-  @include column-center;
+  @include column-top;
   background: linear-gradient(#FFFFFF, #B7DBF3);
+  height: 100vh;
   padding: 20px 0;
 
   h1 {

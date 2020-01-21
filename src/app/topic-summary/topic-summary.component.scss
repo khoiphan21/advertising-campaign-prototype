@@ -6,7 +6,8 @@ $yellow: #F4C70A;
 $blue: #3999E3;
 
 @mixin background($color) {
-  background: linear-gradient(to right, rgba($color, 0.2), rgba($color, 0.8),$color, $color);
+  // background: linear-gradient(to right, rgba($color, 0.2), rgba($color, 0.8),$color, $color);
+  background: $color;
 }
 
 
@@ -15,7 +16,7 @@ $blue: #3999E3;
   position: relative;
   width: 60vh;
   height: 100%;
-  margin-right: 20px;
+  margin-right: 40px;
 
   .header {
     @include column-center;
@@ -30,6 +31,9 @@ $blue: #3999E3;
       border-radius: 10px;
       color: white;
       font-size: 24px;
+      box-shadow: 0 5px 10px rgba(20, 20, 20, 0.4);
+
+      
       span {
         color: inherit;
         margin-bottom: 10px;
@@ -50,6 +54,7 @@ $blue: #3999E3;
 
     .title {
       padding: 10px;
+      margin: 20px;
       font-size: 20px;
     }
   }
@@ -106,7 +111,7 @@ $blue: #3999E3;
     @include size(12vh);
     @include background($purple);
     left: 38%;
-    top:-5vh;
+    top:-10vh;
     color: white;
   }
 
@@ -114,7 +119,7 @@ $blue: #3999E3;
     @include size(18vh);
     @include background($dark-blue);
     right: 4vh;
-    top: 0;
+    top: 2vh;
     color: white;
   }
 
@@ -129,7 +134,7 @@ $blue: #3999E3;
   .cyber-bullying {
     @include size(25vh);
     @include background($yellow);
-    left: 15vh;
+    left: 14vh;
     top: -6vw;
     color: black;
   }
@@ -137,8 +142,8 @@ $blue: #3999E3;
   .isolation {
     @include size(13vh);
     @include background($purple);
-    top: 0;
-    right: 3vh;
+    top: 4vh;
+    right: 5vh;
     color: white;
   }
 }
