@@ -23,10 +23,29 @@ $blue: #3999E3;
     width: 100%;
     
     .voices-heard {
-      padding: 20px 40px;
+      width: 100%;
+      @include column-center;
+      padding: 10px 60px;
       background: $dark-blue;
+      border-radius: 10px;
       color: white;
       font-size: 24px;
+      span {
+        color: inherit;
+        margin-bottom: 10px;
+
+        &.number {
+          font-size: 40px;
+          letter-spacing: 2px;
+        }
+
+        &:last-child {
+          text-transform: uppercase;
+          font-size: 15px;
+          letter-spacing: 1.5px;
+          margin-bottom: 0;
+        }
+      }
     }
 
     .title {

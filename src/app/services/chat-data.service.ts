@@ -26,9 +26,9 @@ private offset = 0;
   private constructor() {
     setInterval(() => {
       // only update 80% of the time
-      if (100 * Math.random() < 50) {
-        return;
-      }
+      // if (100 * Math.random() < 50) {
+      //   return;
+      // }
       const lorem = new LoremIpsum({
         wordsPerSentence: {
           max: 10,
@@ -43,7 +43,7 @@ private offset = 0;
         )
       })
       
-    }, 800);
+    }, 2000);
   }
 
   static get instance() {

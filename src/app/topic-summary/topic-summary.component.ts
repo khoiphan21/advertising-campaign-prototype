@@ -9,7 +9,7 @@ import { ChatDataService } from "../services";
 export class TopicSummaryComponent implements OnInit {
   readonly service = ChatDataService.instance;
 
-  voicesCount = 245657;
+  voicesCount = 25100;
 
   constructor(private changeDetector: ChangeDetectorRef) {}
 
