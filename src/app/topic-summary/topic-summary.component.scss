@@ -5,9 +5,17 @@ $purple: #B585DB;
 $yellow: #F4C70A;
 $blue: #3999E3;
 
-@mixin background($color) {
+@mixin background($text, $bg) {
   // background: linear-gradient(to right, rgba($color, 0.2), rgba($color, 0.8),$color, $color);
-  background: $color;
+  background: $bg;
+  border: 5px solid $bg;
+  color: $text;
+
+  &:hover {
+    cursor: pointer;
+    background: $text;
+    color: $bg;
+  }
 }
 
 
@@ -26,12 +34,14 @@ $blue: #3999E3;
     .voices-heard {
       width: 100%;
       @include column-center;
-      padding: 10px 60px;
-      background: $dark-blue;
+      // padding: 10px 60px;
       border-radius: 10px;
-      color: white;
       font-size: 24px;
-      box-shadow: 0 5px 10px rgba(20, 20, 20, 0.4);
+      color: $dark-blue;
+      // below is for if hse wants blue bg
+      // color: white;
+      // background: $dark-blue;
+      // box-shadow: 0 5px 10px rgba(20, 20, 20, 0.4);
 
       
       span {
@@ -39,13 +49,14 @@ $blue: #3999E3;
         margin-bottom: 10px;
 
         &.number {
-          font-size: 40px;
+          font-size: 60px;
+          font-weight: 500;
           letter-spacing: 2px;
         }
 
         &:last-child {
           text-transform: uppercase;
-          font-size: 15px;
+          font-size: 18px;
           letter-spacing: 1.5px;
           margin-bottom: 0;
         }
@@ -53,9 +64,10 @@ $blue: #3999E3;
     }
 
     .title {
-      padding: 10px;
+      padding: 5px;
+      font-weight: 500;
       margin: 20px;
-      font-size: 20px;
+      font-size: 25px;
     }
   }
   
@@ -75,10 +87,16 @@ $blue: #3999E3;
   @mixin size($size) {
     width: $size;
     height: $size;
-    font-size: $size / 7;
+    font-size: $size / 8;
+
+    .read-more {
+      bottom: $size / 6;
+      font-size: $size/12;
+    }
   }
 
   p {
+    @include column-center;
     z-index: 10;
     position: absolute;
     border-radius: 50%;
@@ -89,61 +107,74 @@ $blue: #3999E3;
     font-weight: 500;
     text-align: center;
     line-height:  125%;
+
+    .title{
+      position: relative;
+      color: inherit;
+      transition: none;
+    }
+
+    &:hover {
+      .read-more {
+        opacity: 1;
+      }
+    }
+
+    .read-more {
+      position: absolute;
+      opacity: 0;
+      left: 0;
+      right: 0;
+      top: 120%;
+    }
   }
 
   .depression {
-    @include size(20vh);
-    @include background($dark-blue);
+    @include size(22vh);
+    @include background(white, $dark-blue);
     left: 0;
     top: 0;
-    color: white;
   }
 
   .anxiety {
-    @include size(18vh);
-    @include background($yellow);
+    @include size(19vh);
+    @include background(white, $yellow);
     right: 10%;
-    top: 0;
-    color: rgb(40, 40, 40);
+    top: -1vh;
   }
 
   .anger {
     @include size(12vh);
-    @include background($purple);
+    @include background(white, $purple);
     left: 38%;
-    top:-10vh;
-    color: white;
-  }
-
-  .verbal-abuse {
-    @include size(18vh);
-    @include background($dark-blue);
-    right: 4vh;
-    top: 2vh;
-    color: white;
+    top:-5vh;
   }
 
   .stress {
     @include size(17vh);
-    @include background(turquoise);
+    @include background(white, turquoise);
     left: -5%;
-    top: 4vh;
-    color: white;
+    top: 7vh;
   }
 
   .cyber-bullying {
     @include size(25vh);
-    @include background($yellow);
+    @include background(white, $yellow);
     left: 14vh;
-    top: -6vw;
-    color: black;
+    top: -4vw;
+  }
+
+  .verbal-abuse {
+    @include size(18vh);
+    @include background(white, $dark-blue);
+    right: 4vh;
+    top: 4vh;
   }
 
   .isolation {
     @include size(13vh);
-    @include background($purple);
-    top: 4vh;
+    @include background(white, $purple);
+    top: 8vh;
     right: 5vh;
-    color: white;
   }
 }
