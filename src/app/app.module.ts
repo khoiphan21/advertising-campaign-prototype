@@ -11,6 +11,7 @@ import { FooterComponent } from "./footer/footer.component";
 import { ChatSimulationComponent } from "./chat-simulation/chat-simulation.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SocialMediaComponent } from './social-media/social-media.component';
+import { HelpChatComponent } from './help-chat/help-chat.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule,BrowserAnimationsModule ],
@@ -22,7 +23,8 @@ import { SocialMediaComponent } from './social-media/social-media.component';
     ContentComponent,
     FooterComponent,
     ChatSimulationComponent,
-    SocialMediaComponent
+    SocialMediaComponent,
+    HelpChatComponent
   ],
   bootstrap: [AppComponent]
 })

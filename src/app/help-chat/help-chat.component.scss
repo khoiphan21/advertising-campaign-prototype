@@ -1,0 +1,17 @@
+@import '../sass/mixins.scss';
+@import '../sass/colors.scss';
+
+.help-chat {
+  @include row-spread;
+  padding: 20px;
+  background: $dark-blue;
+  border-radius: 20px;
+
+  * {
+    color: white;
+  }
+
+  .content {
+    margin-right: 20px
+  }
+}

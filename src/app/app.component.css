@@ -10,3 +10,9 @@ app-social-media {
   top: 35vh;
   right: 2vw;
 }
+
+app-help-chat {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
